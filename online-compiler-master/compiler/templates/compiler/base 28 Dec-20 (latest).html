@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href= 
+        "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+      
+    <link rel="stylesheet" href= 
+        "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">     
+
+    <link href='https://fonts.googleapis.com/css?family=Lato|Roboto:400,900' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">    
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">        
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <script src= 
+        "https://code.jquery.com/jquery-1.12.4.js"> 
+    </script> 
+      
+    <script src= 
+        "https://code.jquery.com/ui/1.12.1/jquery-ui.js"> 
+    </script> 
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src =  
+        "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+    </script> 
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+
+
+    <title>        
+        {% block title %}
+            Online-Compiler
+        {% endblock %}            
+    </title>
+
+    <style>
+
+        #header {
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: Blue;
+            text-align: center;
+            font-size: xx-large;
+            color: white;                                            
+        }                
+
+        strong {
+            font-family: Segoe Print;
+        }
+
+        body {                    
+            transition: background-color .5s;
+        }
+
+        #lang, #myarea, #inp {
+            border-radius: 9px;
+            border-width: 3px;                        
+        }
+
+        #lang {
+            border-color: #d4c81f;
+            height: 40px;
+        }
+
+        #myarea {                        
+            border-color: #0275d8;
+        }
+
+        #inp {            
+            border-color: #1b9c1b;
+        }
+
+
+
+
+        /*    User-Files Table    */
+
+        section {                        
+            border-radius: 9px !important;
+            box-shadow: 4px 5px 10px 1px rgb(0,0,0);
+            width: 450px;
+            align-items: center;
+        }
+
+        .header {
+            background-color: rgb(164, 230, 66);
+        }
+
+        .content {
+            height: 400px;
+            overflow-x: auto !important;
+            margin-top: 0px;
+        }
+
+        .header tr {
+            text-align: center;
+            font-weight: 800px;
+            font-size: 15px;
+            text-transform: uppercase;            
+            box-shadow: 0 10px 15px purple; /*  !important  */
+        }
+
+        td {            
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: 300px;
+        }
+
+        .table {
+            border-radius: 12px !important;            
+        }
+
+        .modal-footer .btn-success {
+            background-color: rgb(164, 230, 66);
+            color: #111;
+        }
+
+
+
+        /*   Log-in SideBar   */
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;            
+            /*margin-top: 50px;*/
+          }
+          
+          .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+          }
+          
+          .sidenav a:hover {
+            color: #e41515;
+          }
+          
+          .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          }    
+
+
+
+          /*   Sign-Up SideBar   */
+
+          .sidenavSignUp {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            bottom: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            /*margin-top: 50px;*/
+          }
+          
+          .sidenavSignUp a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+          }
+          
+          .sidenavSignUp a:hover {
+            color: #e41515;
+          }
+          
+          .sidenavSignUp .closebtnSignUp {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;            
+          }
+          
+          #mainLogin {              
+            transition: margin-left .5s;            
+          }
+
+          #mainSignUp {              
+            transition: margin-right .5s;            
+          }
+          
+          @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+          }
+
+
+
+
+          /*    Rainbow-Effect CSS Button    */
+        
+          .rainbow{
+            background-color: #1b9c1b;
+            border-radius: 12px;  
+            color: #fff;
+            cursor: pointer;            
+            height: 40px;
+            width: 70px;            
+          }
+          
+          .rainbow-1:hover{
+             background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+             animation:slidebg 5s linear infinite;
+          }
+          
+          .rainbow-2:hover{
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+            animation:slidebg 2s linear infinite;
+          }
+          
+          .rainbow-3:hover{
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, red);
+            animation:slidebg 2s linear infinite;
+          }
+
+          @keyframes slidebg {
+            to {
+              background-position:20vw;
+            }
+          }
+
+
+
+
+          /*    Shining-Hover Effect CSS Button    */       
+          .containr {
+            display: flex;            
+          }
+          
+          .anchr {
+            font-size: 1.5rem;
+            padding: 1rem 3rem;
+            color: #f4f4f4;
+            text-transform: uppercase;
+          }
+          
+          .mybtn {
+            text-decoration: none;
+            border: 1px solid rgb(146, 148, 248);
+            position: relative;
+            overflow: hidden;
+          }
+          
+          .mybtn:hover {
+            box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+          }
+          
+          .mybtn:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              120deg,
+              transparent,
+              rgba(146, 148, 248, 0.4),
+              transparent
+            );
+            transition: all 650ms;
+          }
+          
+          .mybtn:hover:before {
+            left: 100%;
+          }
+
+          .btn-outline-success {
+              border-color: #1b9c1b;              
+              border-radius: 25px;
+              width: 300px;
+              color: white;
+          }
+
+          .btn-outline-primary {
+            border-color: #0275d8;              
+            border-radius: 25px;
+            width: 300px;
+            color: white;
+        }
+
+        #LoginForm input, #SignUpForm input {
+            border-radius: 9px;
+        }
+
+
+
+        /* Scrollable-Box styles */
+        .myBox {
+            border: none;
+            padding: 5px;            
+            font-size: 17px;
+            font-family: 'Nunito', sans-serif; 
+            border-radius: 8px;           
+            width: 200px;
+            height: 200px;
+            overflow: scroll;
+        }
+        
+        /* Scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            border: 1px solid yellowgreen;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: yellowgreen;  
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #88ba1c;  
+        }
+
+
+
+
+        /* Alert */
+
+        #alert {
+            position: relative;    
+        }
+        #alert:hover:after {
+            background: hsla(0,0%,0%,.8);
+            border-radius: 3px;
+            color: #f6f6f6;    
+            font: bold 12px/30px sans-serif;
+            height: 30px;
+            left: 50%;
+            margin-left: -60px;
+            position: absolute;
+            text-align: center;
+            top: 50px;
+            width: 120px;
+            margin-bottom: 0;
+        }
+        #alert:hover:before {
+            border-bottom: 10px solid hsla(0,0%,0%,.8);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;    
+            height: 0;
+            left: 50%;
+            margin-left: -10px;
+            position: absolute;
+            top: 40px;
+            width: 0;
+        }
+        #alert:target {
+            display: none;
+        }
+        .alert {
+            background-color: #c4453c;
+            background-image: -webkit-linear-gradient(135deg, transparent,
+                            transparent 25%, hsla(0,0%,0%,.05) 25%,
+                            hsla(0,0%,0%,.05) 50%, transparent 50%,
+                            transparent 75%, rgba(0, 0, 0, 0.05) 75%,
+                            hsla(0,0%,0%,.05));
+            background-image: -moz-linear-gradient(135deg, transparent,
+                            transparent 25%, hsla(0,0%,0%,.1) 25%,
+                            hsla(0,0%,0%,.1) 50%, transparent 50%,
+                            transparent 75%, hsla(0,0%,0%,.1) 75%,
+                            hsla(0,0%,0%,.1));
+            background-image: -ms-linear-gradient(135deg, transparent,
+                            transparent 25%, hsla(0,0%,0%,.1) 25%,
+                            hsla(0,0%,0%,.1) 50%, transparent 50%,
+                            transparent 75%, hsla(0,0%,0%,.1) 75%,
+                            hsla(0,0%,0%,.1));
+            background-image: -o-linear-gradient(135deg, transparent,
+                            transparent 25%, hsla(0,0%,0%,.1) 25%,
+                            hsla(0,0%,0%,.1) 50%, transparent 50%,
+                            transparent 75%, hsla(0,0%,0%,.1) 75%,
+                            hsla(0,0%,0%,.1));
+            background-image: linear-gradient(135deg, transparent,
+                            transparent 25%, hsla(0,0%,0%,.1) 25%,
+                            hsla(0,0%,0%,.1) 50%, transparent 50%,
+                            transparent 75%, hsla(0,0%,0%,.1) 75%,
+                            hsla(0,0%,0%,.1));
+            background-size: 20px 20px;
+            box-shadow: 0 5px 0 hsla(0,0%,0%,.1);
+            color: #f6f6f6;
+            display: inline-block;    
+            height: 40px;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 0px;
+            top: -45px;
+            width: 100%;
+            -webkit-animation: alert 1s ease forwards;
+            -moz-animation: alert 1s ease forwards;
+                -ms-animation: alert 1s ease forwards;
+                -o-animation: alert 1s ease forwards;
+                    animation: alert 1s ease forwards;
+        }
+
+        /* Animation */
+
+        @-webkit-keyframes alert {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 0; }
+        }
+        @-moz-keyframes alert {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 0; }
+        }
+        @-ms-keyframes alert {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 0; }
+        }
+        @-o-keyframes alert {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 0; }
+        }
+        @keyframes alert {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 0; }
+        }
+           
+        </style>
+
+</head>
+
+{% load custom_filters %}
+
+{% load widget_tweaks %}
+
+<body>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("mainLogin").style.marginLeft = "250px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("mainLogin").style.marginLeft= "0";
+          document.body.style.backgroundColor = "white";
+        }
+
+        function openNavSignUp() {
+            document.getElementById("mySidenavSignUp").style.width = "250px";
+            document.getElementById("mainSignUp").style.marginRight = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+          }
+          
+          function closeNavSignUp() {
+            document.getElementById("mySidenavSignUp").style.width = "0";
+            document.getElementById("mainSignUp").style.marginRight = "0";
+            document.body.style.backgroundColor = "white";
+          }
+
+          function authen_Upload() {              
+            {% if not user.is_authenticated  %}
+                alert("To Upload A File, You Need To Login First !!");
+            {% else %}
+                document.getElementById("myform").submit();
+            {% endif %}
+          }    
+          
+          
+          
+          function login_refresh() {            
+            //document.getElementById('LoginForm').submit();                                              
+            setTimeout(function(){ location.href = "http://127.0.0.1:8080/"; }, 5000);
+          }
+
+          
+
+          function login_refresh2() {
+            document.getElementById('LoginForm').submit();                         
+            //$("#staticBackdrop2").modal();
+            //setTimeout(function(){ $("#staticBackdrop2").modal("show"); }, 300);                                                                                                
+          }  
+          
+            /*  Close alert "Fade-out" effect  */
+          setTimeout(function(){ $("#alert").fadeOut("slow"); }, 2500)
+
+                    
+    </script> 
+
+
+<div id="mainLogin">
+
+    <div id="mainSignUp">       
+             
+    <div id="header">                   
+        
+            <form action="" method="POST" enctype="multipart/form-data" style="float: right;" id="myform" novalidate>
+                {% csrf_token %}
+                <!-- {#% render_field upload.codefile class="btn btn-success btn-sm" onchange="this.form.submit()" %#}  ## To submit or post "Uploaded File" without 'Submit' Button add [ onclick="this.form.submit()" ] in  -->
+                {% render_field upload.codefile class="btn btn-success btn-sm" id="ChooseFile" %}                
+                <button type="button" class="btn btn-dark btn-sm" onclick="authen_Upload()" title="Upload CodeFile To Your Cloud Space."> Upload </button> &nbsp;
+
+                <!-- <input type="submit" value="Upload" class="btn btn-dark btn-sm" onclick="TextAreaValue()"> -->
+                <!-- <input type="submit" value="Upload" class="btn btn-dark btn-sm">  -->
+                            
+            <!-- <br>
+            <div style="float: right; color: red; font-size: 15px; margin-right: 23px;">
+                {#% if messages %#}                    
+                    {#% for message in messages  %#}
+                        <strong> {{ message }} </strong> 
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert" style="height: 50px; margin-top: 20px; margin-right: 500px; font-size: medium;">
+                            <a href="{% url 'home' %}"> <strong> {{ message }} </strong> </a>                        
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                              <span aria-hidden="true">&times;</span> 
+                            </button> 
+                        </div>
+                    {#% endfor %#}                                    
+                {#% endif %#}
+            </div> -->
+
+            </form>
+
+            <span style="float: left; margin-left: 20px;">                    
+                <a class="btn  btn-success btn-sm" href="{% url 'home' %}" title="Home/Refresh"> Home </a> &nbsp;
+            </span>
+            {% if user.is_authenticated %}                                        
+                <span style="float: left;">                    
+                    <a class="btn btn-danger btn-sm" href="{% url 'logout' %}" title="Log out From Your Account."> Logout </a> 
+                      <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-sm" style="margin-left: 8px;" title="Access Your Saved/Uploaded Files." data-toggle="modal" data-target="#staticBackdrop">
+                        My Codes
+                    </button> &nbsp;
+                </span>
+            {% else %}
+                <span style="float: left;">
+                    <button class="btn  btn-warning btn-sm" style="margin-right: 10px;" onclick="openNav()" title="Login To Get More Features!"> Login </button> 
+                    <button class="btn  btn-danger btn-sm" style="margin-right: 10px;" onclick="openNavSignUp()" title="Sign Up To Become A Memeber !"> SignUp </button> 
+                </span>
+            {% endif %}
+
+            
+        Online Compiler 
+        <span style="float: right; color: yellow; margin-right: 20px;"> Hello {% if user.is_authenticated %}  {{ user|first_letter_capital }} {% else %} Coder {% endif %} ! </span>
+
+    </div>
+
+    {% if messages %}                    
+        {% for message in messages  %}            
+            <!-- <div class="alert" id="alert" style="margin-top: 0px; margin-bottom: 0; margin-right: 500px; font-size: large;">
+                <strong> {{ message }} </strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span> 
+                </button> 
+            </div> -->
+
+            <div id="alert">
+                <a class="alert" class="close" data-dismiss="alert" aria-label="Close"> <strong style="font-size: large; color: white;">{{ message }}</strong> </a>
+            </div>
+        {% endfor %}                                    
+    {% endif %}
+
+    <br>
+
+
+            <!-- Side Bar Menu For "LOGIN" (Below "div") -->
+    
+    {% if not user.is_authenticated %}            
+        
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <br>           
+        <h3 style="margin-left: 58px; color: #5cb85c;"> <i><u>Log in Here</u></i> </h3> <br>
+        <form action="" method="POST" id="LoginForm" style="color: white; padding: 25px;">
+
+            {% csrf_token %}
+    
+            <label for="fnm">Username:</label>
+            <input type="text" id="fnm" name="uname" class="form-control col-12">
+            
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" class="form-control col-12"><br>
+                        
+            <!-- <input type="submit" value="Login" class="btn btn-success btn-md rainbow rainbow-2" style="margin-left: 55px; font-family: 'Nunito', sans-serif;"> -->
+            <div class="containr">
+                <!-- <button type="button" class="btn btn-outline-success mybtn" style="margin-left: 0px;" onclick="document.getElementById('LoginForm').submit();" data-toggle="modal" data-target="#staticBackdrop2"> Login </button> -->
+                <!-- <button type="button" class="btn btn-primary btn-sm" style="margin-left: 8px;" data-toggle="modal" data-target="#staticBackdrop"></button> -->
+                <button type="button" class="btn btn-outline-success mybtn" style="margin-left: 0px;" onclick="login_refresh2()"> Login </button>
+            </div>
+    
+        </form>            
+    </div>    
+
+
+
+            <!-- Side Bar Menu For "SIGN-UP" (Below "div") -->
+
+    <div id="mySidenavSignUp" class="sidenavSignUp">
+        <a href="javascript:void(0)" class="closebtnSignUp" onclick="closeNavSignUp()">&times;</a> <br>           
+        <h3 style="margin-left: 40px; color: #0275d8;"> <i><u>Sign-Up Here</u></i> </h3>
+        <form action="" method="POST" id="SignUpForm" style="color: white; padding: 25px;">
+
+            {% csrf_token %}
+    
+            <label for="fname">Username:</label><br>
+            <input type="text" id="fname" name="username" class="form-control col-12">
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" class="form-control col-12">
+
+            <label for="pwd1">Password:</label><br>
+            <input type="password" id="pwd1" name="password1" class="form-control col-12">
+
+            <label for="pwd2">Confirm Password:</label><br>
+            <input type="password" id="pwd2" name="password2" class="form-control col-12"><br>
+
+            <!-- <input type="submit" value="Register"class="btn btn-outline-primary" style="margin-left: 50px;"> -->
+            <div class="containr">
+                <button type="button" class="btn btn-outline-primary mybtn" style="margin-left: 0px;" onclick="document.getElementById('SignUpForm').submit()"> Sign Up </button>
+            </div>
+
+        </form>        
+    </div>
+    {% endif %}
+
+    
+    <!-- <div id="mainLogin">
+
+        <div id="mainSignUp"> -->
+                    
+        {% block code %}
+
+        <form action="" method="POST" id="CodeArea" style="margin-left: 100px;" novalidate>
+
+            {% csrf_token %}
+            <div style="margin-left: 400px;" class="codeinp">
+                <!-- {{ form.as_p }} -->
+                <label for="lang"> <strong>Choose Programming Language:</strong> </label> 
+                {% render_field form.prog_lang id="lang" class="form-control col-2" %}
+                <br>                
+                
+                {% if user_code %}
+
+                    <label for="myarea"> <strong>Enter Your Code Here:</strong> </label> 
+                    <textarea name="code" id="myarea" class="form-control col-4" rows="7"> {{ user_code }} </textarea>
+
+                {#% elif file_code %#}
+                {% elif request.session.file_code %}
+
+                    <label for="myarea"> <strong>Enter Your Code Here:</strong> </label> 
+                    <!-- <textarea name="code" id="myarea" class="form-control col-4" rows="7"> {{ file_code }} </textarea> -->
+                    <textarea name="code" id="myarea" class="form-control col-4" rows="7"> {{ request.session.file_code }} </textarea>
+
+                {% else %}
+                    
+                    <label for="myarea"> <strong>Enter Your Code Here:</strong> </label> <br>
+                    {% render_field form.code id="myarea" %}
+
+                {% endif %}                                
+
+                <!-- <strong> {{ iform.as_p }} </strong> -->
+                <label for="inp" style="font-family: cursive;"> <strong>Inputs(if any):</strong> </label>
+                {% render_field iform.inputs id="inp" class="form-control col-4" rows="4" %}
+                <br>
+
+                <!-- <input type="submit" class="btn btn-info" value="Execute" id="submit"> -->
+                <button type="button" id="execute" class="btn btn-info">
+                    Execute
+                </button>
+                
+
+                
+                {% if user.is_authenticated %}                
+                    
+                    <!-- Button trigger modal -->
+                    <button type="button" id="save" class="btn btn-primary" data-target="#exampleModal">
+                        Save As File
+                    </button>
+
+                {% endif %}
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="font-family: cursive;"> Save File As... </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                            <div class="modal-body">
+                                
+                                <label for="filename"> Enter File Name: </label>
+                                {% render_field form.filename id="filename" placeholder="@e.g., hello.py or Hello.java " class="form-control col-6" %}
+
+                            </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input type="submit" id="filesave" value="Save & Execute" class="btn btn-primary">
+                        <!-- <button type="button" id="filesave" onclick="rload()" class="btn btn-primary"> Save & Execute </button> -->
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <script>
+
+                    /*$(document).ready(function () {
+                        $('textarea').change(function () {
+                            $(this).val($(this).val().replace(/\n{3,}/g, "\r\n"));
+                        });
+                    });
+
+                    function TextAreaValue() {
+                        document.getElementById("myform").submit();
+                        document.getElementById("myarea").defaultValue = "Hello Guys!";
+                    }
+
+                    function checking() {
+                        var textBox =  $.trim( $('input[type=text]').val() )
+                        if (textBox == "") {
+                            $("#error").show('slow');
+                        }
+                    }*/
+
+                    function executeCode() {
+                        /*alert("I'm Javascript in jQuery!!");*/
+                        document.getElementById("CodeArea").submit();
+                    }
+
+                    $(document).ready(function() {          
+                    $('#execute').click(function() {
+                        if (!$('#myarea').val()) {
+                            alert('You need to write some code to proceed !!');                            
+                        }
+                        else {
+                            /*alert('Else Working !!');*/
+                            //executeCode();   
+                            document.getElementById("filename").value = '';
+                            $("#CodeArea").submit();
+                        }
+                    })
+                    });
+
+                    $(document).ready(function() {
+                        $('#save').click(function() {
+                          var value = document.getElementById('myarea').value;
+                          if (value === '') {
+                            alert('To create file, you need to write some code to save in it !!');                               
+                          }
+                          else {
+                            $('#exampleModal').modal('show');                                                
+                          }
+                        })
+                    });
+
+                    $(document).ready(function() {
+                        $('#filesave').click(function() {
+                          var value = document.getElementById('myarea').value;
+                          if (value === '') {
+                            alert('To create new file, you need to write some code to in it !!');
+                            //alert = function(){};
+                          }                          
+                        })
+                    });
+
+                    function copycode() {
+                        document.getElementById("myarea").value = "{{ file.codefile.url }}";
+                    }
+
+                    /*$(document).on("click", function(e) {
+                        if (e.target === document || e.target.tagName === "BODY" || e.target.tagName === "HTML") {
+                            alert("Worked!!");
+                        }
+                    });*/   /*for getting blank clicks*/ 
+                    
+                    
+                    //To reload window :-
+                        //window.location.reload();
+
+                    /*function rload() {
+                        window.location.reload();
+                    }*/
+                        
+                </script>
+
+            </div>
+
+        </form>
+
+        {% endblock code %}
+
+        <hr>
+
+
+        <div class="container">
+
+            <div style="float: left; margin-top: 0; margin-left: 40px;">
+                {% block compile %}
+                <strong> Compilation &colon; </strong>
+                <div
+                    style="border: 2px solid red; width: 450px; height: 290px; background-color: lightblue; padding-left: 15px; padding-top: 10px;"  class="myBox">
+
+                    {% if compile %}
+
+                        {% if compile|check_type %}
+
+                            {% for cp in compile %}
+                                {{ cp|check_dir_address }} <br>                                
+                            {% endfor %}
+
+                        {% else %}
+
+                            {{ compile }}
+
+                        {% endif %}
+
+                    {% endif %}
+
+                </div>
+                {% endblock compile %}
+            </div>
+
+
+            <div style="float: right; margin-top: 0; margin-bottom: 150px; margin-right: 40px;">
+                {% block result %}
+                <strong> Output &colon; </strong>
+                <div
+                    style="border: 2px solid red; width: 450px; height: 290px; background-color: lightblue; padding-left: 15px; padding-top: 10px;"  class="myBox">
+
+                    {% if output %}
+
+                        {% if output|check_type %}
+
+                            {% for out in output %}                            
+                                {{ out }} <br>                                
+                            {% endfor %}
+
+                        {% else %}
+
+                            {{ output }}
+
+                        {% endif %}
+
+                    {% endif %}
+
+                </div>
+                {% endblock result %}
+
+            </div>
+
+    </div>
+    
+</div>
+
+
+
+  <!-- Modal For (Login-Refresh-On-Confirm) -->
+<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel2">Welcome To Online Compiler</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            You Are Successfully Logged In!!
+        </div>
+        <div class="modal-footer">
+          <button type="button" style="margin-right: 200px;" class="btn btn-success" onclick="login_refresh()"><strong>Close</strong></button>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+        
+
+  
+  <!-- Modal For (User Code Files) -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Hey {{ user|first_letter_capital }}&comma; Your Code Tresure Is Listed Below...</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <!-- <section> -->
+                <div class="header">
+                    <table class="table table-bordered table-fixed">
+                        <thead>
+                        <tr>
+                            <th style="margin-left: 250px; margin-right: 195px; margin-top: 7px; margin-bottom: 7px;"> Code Files </th>                            
+                            <th style="margin-left: 150px; margin-right: 150px; margin-top: 7px; margin-bottom: 7px;"> Details </th>                
+                        </tr>
+                        </thead>
+                    </table>        
+                </div>
+            
+                <div class="content">  
+                {#% if user.is_authenticated %#}                  
+                {#% if file_code %#}
+                {% if user_files %}                                                                                        
+                    <table class="table table-borderless table-hover">
+                        <tbody>
+                            {% for file in user_files reversed %}                        
+                            <tr>
+                                <td style="float: left; padding-left: 14px; padding-top: 16px; padding-bottom: 17px;">                                    
+
+                                    <button type="button" class="btn btn-warning btn-md" style="color: black; width: 20px; border-radius: 15px;" data-toggle="tooltip" data-placement="top" title="Created on {{ file.date }} at {{ file.time }}">
+                                        {{ file.codefile.url|remove_file_address }} <br>
+                                    </button>                                    
+
+                                </td>
+            
+                                <td style="float: right; padding-left: 15px; padding-right: 20px; padding-top: 11px; padding-bottom: 11px;">
+                                    
+                                    <!-- <button type="button" class="btn btn-primary" onclick="copycode()" data-dismiss="modal">
+                                        <strong>Copy To Code Area</strong>
+                                    </button>           -->
+                                    
+                                    
+                                    {#% if file_code %#}
+                                        <!-- <a href="{#% url 'get_code' file.id %#}" class="btn btn-primary btn-sm"> Copy To CodeArea </a> -->
+                                    {#% endif %#}                                                                            
+
+                                    <form action="" method="POST" novalidate>
+                                         {% csrf_token %}
+                                        <input type="hidden" name="fcode" id="fc" value="{{ file.id }}">
+                                        <input type="submit" class="btn btn-primary btn-sm" value="Copy Text To CodeArea">
+                                    </form>
+
+                                </td>
+                            </tr> 
+                        {% endfor %}                                            
+                        </tbody>     
+
+                {% else %}
+                        
+                        <br> <br> <br> <br> <br>
+                    <div style="margin-left: 150px;"> 
+                        <span> <strong>No Files Created Yet!!</strong> </span> <br> <br>
+                        <button type="button" style="margin-left: 23px; border-radius: 10px;" class="btn btn-primary btn-md" data-dismiss="modal"><strong>Code Now!!</strong></button>          
+                    </div>
+
+                {% endif %}         
+                {#% endif %#}                                                                                                                                                                                              
+                {#% endif %#}                                                                                                                                                                                              
+                    </table>
+                </div>
+            <!-- </section> -->
+                                                
+        </div>
+        <div class="modal-footer">
+          <button type="button" style="margin-right: 200px;" class="btn btn-success" data-dismiss="modal"><strong>Close</strong></button>          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

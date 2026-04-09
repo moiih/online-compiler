@@ -1,0 +1,502 @@
+
+Error at 11:30 PM on 11/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler\compiler\views.py", line 251, in compile
+    os.remove(javaaaavfile)
+NameError: name 'javaaaavfile' is not defined
+
+
+
+Error at 11:33 PM on 11/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler\compiler\views.py", line 251, in compile
+    os.remove(javaaaavfile)
+NameError: name 'javaaaavfile' is not defined
+
+
+
+Error at 11:00 PM on 14/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 246, in compile
+    os.remove(class_file)    ## Deleting (.class) file as its work has been done (no longer in use).cd.
+OSError: [WinError 123] The filename, directory name, or volume label syntax is incorrect: 'F:/django_projects/Online_Compiler/*.class'
+
+
+
+Error at 11:04 PM on 14/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 248, in compile
+    os.remove(class_file)    ## Deleting (.class) file as its work has been done (no longer in use).cd.
+TypeError: remove: path should be string, bytes or os.PathLike, not list
+
+
+
+Error at 12:05 AM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 182, in compile
+    class_file_name = class_file_name[0].replace('.class', '')   ## Removing ('.class') Extention from Filename [ "Hello.class" ---> "Hello" ]
+IndexError: list index out of range
+
+
+
+    Error at 12:07 AM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 194, in compile
+    with open(java_file, 'w') as fp:
+UnboundLocalError: local variable 'java_file' referenced before assignment
+
+
+
+                   Error at 12:08 AM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 194, in compile
+    with open(java_file, 'w') as fp:
+UnboundLocalError: local variable 'java_file' referenced before assignment
+
+
+
+				Error at 12:09 AM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 194, in compile
+    with open(java_file, 'w') as fp:
+UnboundLocalError: local variable 'java_file' referenced before assignment
+
+
+
+													Error at 12:09 AM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 194, in compile
+    with open(java_file, 'w') as fp:
+UnboundLocalError: local variable 'java_file' referenced before assignment
+
+
+
+																		Error at 12:10 AM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 194, in compile
+    with open(java_file, 'w') as fp:
+UnboundLocalError: local variable 'java_file' referenced before assignment
+
+
+
+																		Error at 07:44 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 179, in compile
+    print('\n\nclass_file (list) :', class_file, end='\n\n')
+NameError: name 'class_file' is not defined
+
+
+
+																		Error at 08:24 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 264, in compile
+    if 'Simple_Inheritance.java:21: error: missing return statement }' in c2:
+UnboundLocalError: local variable 'c2' referenced before assignment
+
+
+
+																		Error at 08:24 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 264, in compile
+    if 'Simple_Inheritance.java:21: error: missing return statement }' in c:
+TypeError: a bytes-like object is required, not 'str'
+
+
+
+																		Error at 08:26 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 264, in compile
+    if b'Simple_Inheritance.java:21: error: missing return statement }' in str(c):
+TypeError: 'in <string>' requires string as left operand, not bytes
+
+
+
+																		Error at 08:27 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 265, in compile
+    print('\n\nFlag :', flag, end='\n\n')
+NameError: name 'flag' is not defined
+
+
+
+																		Error at 08:33 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 268, in compile
+    compile_result = compile_result + 'Probable Error at: check whether main method is defined properly or not, please define method as: public static void main(String[] args)'
+TypeError: can only concatenate list (not "str") to list
+
+
+
+																		Error at 08:34 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 269, in compile
+    compile_result = compile_result.append('Probable Error at: check whether main method is defined properly or not, please define method as: public static void main(String[] args)')
+AttributeError: 'NoneType' object has no attribute 'append'
+
+
+
+																		Error at 09:25 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 279, in compile
+    for c_file in class_file:
+NameError: name 'class_file' is not defined
+
+
+
+																		Error at 10:22 PM on 15/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 274, in compile
+    if 'error: missing return statement\r\n     }\r\n     ^\r\n1 error\r\n' in c:
+TypeError: a bytes-like object is required, not 'str'
+
+
+
+																		Error at 02:22 AM on 16/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 132, in compile
+    obj = upload(commit=False)
+TypeError: 'CodeUploadForm' object is not callable
+
+
+
+																		Error at 02:24 AM on 16/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 133, in compile
+    obj = upload(commit=False)
+TypeError: 'CodeUploadForm' object is not callable
+
+
+
+																		Error at 02:27 AM on 16/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 140, in compile
+    codefile_ref = 'F:/django_projects/Online_Compiler_beta/media/' + user_codefile
+TypeError: can only concatenate str (not "FieldFile") to str
+
+
+
+																		Error at 02:29 AM on 16/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 140, in compile
+    codefile_ref = 'F:/django_projects/Online_Compiler_beta/media/' + user_codefile
+TypeError: can only concatenate str (not "FieldFile") to str
+
+
+
+																		Error at 02:31 AM on 16/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 140, in compile
+    codefile_ref = 'F:/django_projects/Online_Compiler_beta/media/' + user_codefile
+TypeError: can only concatenate str (not "FieldFile") to str
+
+
+
+																		Error at 10:18 PM on 16/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta\compiler\views.py", line 127, in compile
+    print('\n\nCode:\n', code.split('\r\n'), '\n')
+AttributeError: 'list' object has no attribute 'split'
+
+
+
+																		Error at 02:17 AM on 18/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta2\compiler\views.py", line 155, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/Online_Compiler_beta/media/Code_Files/hye2.py'
+
+
+
+																		Error at 04:29 AM on 18/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta2\compiler\views.py", line 153, in compile
+    file_object = open("%s/%s" %(settings.MEDIA_ROOT, file_nm),w)
+NameError: name 'w' is not defined
+
+
+
+																		Error at 04:33 AM on 18/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta2\compiler\views.py", line 154, in compile
+    custom_upload = Upload(codefile=file_nm, user_id=request.user.id)
+NameError: name 'Upload' is not defined
+
+
+
+																		Error at 02:21 PM on 24/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 182, in compile
+    obj.user = request.user
+  File "C:\Users\Acer\Envs\evn1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x05DE6028>>": "CodeFileUpload.user" must be a "User" instance.
+
+
+
+																		Error at 02:22 PM on 24/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 182, in compile
+    obj.user = request.user
+  File "C:\Users\Acer\Envs\evn1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x06ABFDF0>>": "CodeFileUpload.user" must be a "User" instance.
+
+
+
+																		Error at 02:30 PM on 24/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 163, in compile
+    obj.user = request.user
+  File "C:\Users\Acer\Envs\evn1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x06169B50>>": "CodeFileUpload.user" must be a "User" instance.
+
+
+
+																		Error at 08:16 PM on 24/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 255, in compile
+    obj.user = request.user
+  File "C:\Users\Acer\Envs\evn1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x06759760>>": "CodeFileUpload.user" must be a "User" instance.
+
+
+
+																		Error at 08:54 PM on 24/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 255, in compile
+    obj.user = request.user
+  File "C:\Users\Acer\Envs\evn1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x06D86EF8>>": "CodeFileUpload.user" must be a "User" instance.
+
+
+
+																		Error at 09:00 PM on 24/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 255, in compile
+    obj.user = request.user
+  File "C:\Users\Acer\Envs\evn1\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x05B986E8>>": "CodeFileUpload.user" must be a "User" instance.
+
+
+
+																		Error at 06:56 PM on 25/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 275, in compile
+    file_object_pointer = open("%s%s" %(settings.MEDIA_ROOT, file_nm),'w')   ## Opening the File (in a bit different way, i.e., by using Cpython Method) by using "Exact Address" where to store the file.        ####  Fully Correct   ####
+FileNotFoundError: [Errno 2] No such file or directory: 'F:\\django_projects\\Online_Compiler_beta3\\mediaCode_Files/File11.py'
+
+
+
+																		Error at 10:12 PM on 27/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 487, in compile
+    if compile_result.count('EOFError: EOF when reading a line') > 0:
+TypeError: argument should be integer or bytes-like object, not 'str'
+
+
+
+																		Error at 10:12 PM on 27/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 487, in compile
+    if compile_result.count('EOFError: EOF when reading a line') > 0:
+TypeError: argument should be integer or bytes-like object, not 'str'
+
+
+
+																		Error at 07:31 PM on 28/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta3\compiler\views.py", line 372, in compile
+    lines = f.readlines()
+  File "c:\users\acer\appdata\local\programs\python\python38-32\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 57: character maps to <undefined>
+
+
+
+																		Error at 04:59 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Harry%20Potter.py'
+
+
+
+																		Error at 05:00 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Harry%20Potter.py'
+
+
+
+																		Error at 05:03 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Seating%20Stadium%20Conginent.py'
+
+
+
+																		Error at 05:07 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Seating%20Stadium%20Conginent.py'
+
+
+
+																		Error at 05:08 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Digits%20Pair.py'
+
+
+
+																		Error at 05:09 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Cars%20Collision.py'
+
+
+
+																		Error at 05:10 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Digits%20Pair.py'
+
+
+
+																		Error at 05:10 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/sum%20of%20positive.py'
+
+
+
+																		Error at 05:11 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/sum%20of%20positive.py'
+
+
+
+																		Error at 05:12 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/sum%20of%20positive.py'
+
+
+
+																		Error at 05:16 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/sum%20of%20positive.py'
+
+
+
+																		Error at 05:25 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/new%20view.py'
+
+
+
+																		Error at 05:26 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 371, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Exception%20Handling%20Class.py'
+
+
+
+																		Error at 05:31 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 374, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/sum%20of%20positive.py'
+
+
+
+																		Error at 05:32 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 374, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/sum_20of_20positive.py'
+
+
+
+																		Error at 05:32 PM on 29/12/2020
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 374, in compile
+    with open(codefile_ref, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'F:/django_projects/online_compiler_beta4/media/Code_Files/Grooving_20Monkeys.py'
+
+
+
+																		Error at 10:21 PM on 15/03/2021
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 442, in compile
+    code_output = subp.stdout.read().decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 19: invalid start byte
+
+
+
+																		Error at 10:34 PM on 15/03/2021
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 442, in compile
+    code_output = subp.stdout.read().decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 0: invalid start byte
+
+
+
+																		Error at 10:36 PM on 15/03/2021
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 442, in compile
+    code_output = subp.stdout.read().decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 0: invalid start byte
+
+
+
+																		Error at 10:42 PM on 15/03/2021
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 442, in compile
+    code_output = subp.stdout.read().decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 0: invalid start byte
+
+
+
+																		Error at 10:43 PM on 15/03/2021
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 442, in compile
+    code_output = subp.stdout.read().decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 0: invalid start byte
+
+
+
+																		Error at 10:45 PM on 15/03/2021
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 442, in compile
+    code_output = subp.stdout.read().decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 0: invalid start byte
+
+
+
+																		Error at 10:45 PM on 15/03/2021
+Traceback (most recent call last):
+  File "F:\django_projects\Online_Compiler_beta4\compiler\views.py", line 442, in compile
+    code_output = subp.stdout.read().decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x94 in position 0: invalid start byte
+
+

@@ -1,0 +1,413 @@
+#header {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: blue;
+    text-align: center;
+    font-size: xx-large;
+    color: white;                                            
+}                
+
+strong {
+    font-family: Segoe Print;
+}
+
+body {                    
+    transition: background-color .5s;
+}
+
+#lang, #myarea, #inp {
+    border-radius: 9px;
+    border-width: 3px;                        
+}
+
+#lang {
+    border-color: #d4c81f;
+    height: 40px;
+}
+
+#myarea {                        
+    border-color: #0275d8;
+}
+
+#inp {            
+    border-color: #1b9c1b;
+}
+
+
+
+
+
+/*    User-Files Table    */
+
+section {                        
+    border-radius: 9px !important;
+    box-shadow: 4px 5px 10px 1px rgb(0,0,0);
+    width: 450px;
+    align-items: center;
+}
+
+.header {
+    background-color: rgb(164, 230, 66);
+}
+
+.content {
+    height: 400px;
+    overflow-x: auto !important;
+    margin-top: 0px;
+}
+
+.header tr {
+    text-align: center;
+    font-weight: 800px;
+    font-size: 15px;
+    text-transform: uppercase;            
+    box-shadow: 0 10px 15px purple; /*  !important  */
+}
+
+td {            
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 300px;
+}
+
+.table {
+    border-radius: 12px !important;            
+}
+
+.modal-footer .btn-success {
+    background-color: rgb(164, 230, 66);
+    color: #111;
+}
+
+
+
+/*   Log-in SideBar   */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;            
+    /*margin-top: 50px;*/
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #e41515;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }    
+
+
+
+  /*   Sign-Up SideBar   */
+
+  .sidenavSignUp {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    /*margin-top: 50px;*/
+  }
+  
+  .sidenavSignUp a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenavSignUp a:hover {
+    color: #e41515;
+  }
+  
+  .sidenavSignUp .closebtnSignUp {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;            
+  }
+  
+  #mainLogin {              
+    transition: margin-left .5s;            
+  }
+
+  #mainSignUp {              
+    transition: margin-right .5s;            
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+
+
+  /*    Rainbow-Effect CSS Button    */
+
+  .rainbow{
+    background-color: #1b9c1b;
+    border-radius: 12px;  
+    color: #fff;
+    cursor: pointer;            
+    height: 40px;
+    width: 70px;            
+  }
+  
+  .rainbow-1:hover{
+     background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+     animation:slidebg 5s linear infinite;
+  }
+  
+  .rainbow-2:hover{
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    animation:slidebg 2s linear infinite;
+  }
+  
+  .rainbow-3:hover{
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, red);
+    animation:slidebg 2s linear infinite;
+  }
+
+  @keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+  }
+
+
+
+
+  /*    Shining-Hover Effect CSS Button    */       
+  .containr {
+    display: flex;            
+  }
+  
+  .anchr {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    color: #f4f4f4;
+    text-transform: uppercase;
+  }
+  
+  .mybtn {
+    text-decoration: none;
+    border: 1px solid rgb(146, 148, 248);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .mybtn:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  }
+  
+  .mybtn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent
+    );
+    transition: all 650ms;
+  }
+  
+  .mybtn:hover:before {
+    left: 100%;
+  }
+
+  .btn-outline-success {
+      border-color: #1b9c1b;                    
+      width: 300px;
+      color: white;
+  }
+
+  .btn-outline-primary {
+    border-color: #0275d8;                 
+    width: 300px;
+    color: white;
+}
+
+#LoginForm input, #SignUpForm input {
+    border-radius: 9px;
+}
+
+
+
+/* Scrollable-Box styles */
+.myBox {
+    border: none;
+    padding: 5px;            
+    font-size: 17px;
+    font-family: 'Nunito', sans-serif; 
+    border-radius: 8px;           
+    width: 200px;
+    height: 200px;
+    overflow: scroll;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid yellowgreen;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: yellowgreen;  
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #88ba1c;  
+}
+
+
+
+
+/* Alert */
+
+#alert {
+    position: relative;    
+}
+#alert:hover:after {
+    background: hsla(0,0%,0%,.8);
+    border-radius: 3px;
+    color: #f6f6f6;    
+    font: bold 12px/30px sans-serif;
+    height: 30px;
+    left: 50%;
+    margin-left: -60px;
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    width: 120px;
+    margin-bottom: 0;
+}
+#alert:hover:before {
+    border-bottom: 10px solid hsla(0,0%,0%,.8);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;    
+    height: 0;
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+    top: 40px;
+    width: 0;
+}
+#alert:target {
+    display: none;
+}
+.alert {
+    background-color: #c4453c;
+    background-image: -webkit-linear-gradient(135deg, transparent,
+                    transparent 25%, hsla(0,0%,0%,.05) 25%,
+                    hsla(0,0%,0%,.05) 50%, transparent 50%,
+                    transparent 75%, rgba(0, 0, 0, 0.05) 75%,
+                    hsla(0,0%,0%,.05));
+    background-image: -moz-linear-gradient(135deg, transparent,
+                    transparent 25%, hsla(0,0%,0%,.1) 25%,
+                    hsla(0,0%,0%,.1) 50%, transparent 50%,
+                    transparent 75%, hsla(0,0%,0%,.1) 75%,
+                    hsla(0,0%,0%,.1));
+    background-image: -ms-linear-gradient(135deg, transparent,
+                    transparent 25%, hsla(0,0%,0%,.1) 25%,
+                    hsla(0,0%,0%,.1) 50%, transparent 50%,
+                    transparent 75%, hsla(0,0%,0%,.1) 75%,
+                    hsla(0,0%,0%,.1));
+    background-image: -o-linear-gradient(135deg, transparent,
+                    transparent 25%, hsla(0,0%,0%,.1) 25%,
+                    hsla(0,0%,0%,.1) 50%, transparent 50%,
+                    transparent 75%, hsla(0,0%,0%,.1) 75%,
+                    hsla(0,0%,0%,.1));
+    background-image: linear-gradient(135deg, transparent,
+                    transparent 25%, hsla(0,0%,0%,.1) 25%,
+                    hsla(0,0%,0%,.1) 50%, transparent 50%,
+                    transparent 75%, hsla(0,0%,0%,.1) 75%,
+                    hsla(0,0%,0%,.1));
+    background-size: 20px 20px;
+    box-shadow: 0 5px 0 hsla(0,0%,0%,.1);
+    color: #f6f6f6;
+    display: inline-block;    
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0px;
+    top: -45px;
+    width: 100%;
+    -webkit-animation: alert 1s ease forwards;
+    -moz-animation: alert 1s ease forwards;
+        -ms-animation: alert 1s ease forwards;
+        -o-animation: alert 1s ease forwards;
+            animation: alert 1s ease forwards;
+}
+
+/* Animation */
+
+@-webkit-keyframes alert {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 0; }
+}
+@-moz-keyframes alert {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 0; }
+}
+@-ms-keyframes alert {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 0; }
+}
+@-o-keyframes alert {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 0; }
+}
+@keyframes alert {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 0; }
+}              
+
+

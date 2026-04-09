@@ -1,0 +1,46 @@
+{% extends 'compiler/base.html' %}
+
+<title>
+    {% block title %} Login {% endblock %}
+</title>
+
+{% block auther %}
+
+<div class="elements">
+
+<h4 style="color: green;"> <u><i>Login</i></u> </h4>
+
+<form action="" method="POST">
+
+        {% csrf_token %}
+
+    <label for="fnm">Username:</label>
+    <input type="text" id="fnm" name="uname">
+    
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="pwd">
+    
+
+    <input type="submit" value="Login">
+
+</form>
+
+</div>
+
+<script>
+    {% if messages %}    
+            {% for message in messages  %}
+                 alert("{{ message }}");
+            {% endfor %}    
+    {% endif %}
+</script>
+
+<!-- <script>
+    function check_nav_type() {
+        if (window.performance.navigation.type == 0) {
+            alert("User Registered!!");
+        }
+    }
+</script> -->
+    
+{% endblock auther %}    
