@@ -8,7 +8,8 @@ As of now the application has support for the following frequently-used language
   - Provides single interface for executing codes written in different programming languages.
   - Serves a 🌐nearly-SPA experience to users, so the users can signup, login and run their codes without having to go different pages of the website.
   - Allows users to upload any code file 🗃️ locally from their computer and use it editing, saving and executing the code.
-  - Accepts argumets and parameters if the program required through a dedicated inout field.
+  - Accepts argumets and parameters if the program required through a dedicated inputs field.
+  - Features light mode and dark mode which can be toggled with just a click🖱️.
   - Recognizes the code patterns and sets the compiler/interpreter type to match the languages of program in real-time.
   - Displays the compilation errors and results (output) separately and also suggests fixes for common coding mistakes. For example, if the user runs a program but forgets to provides input, a fix/suggestion message will be displayed along with the actual compilation error.
 
